@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    background: #fff;
+  }
+  .container{
+    display: inline-flex;
+  }
+  .container .estatico{
+    color: #111111;
+    font-size: 50px;
+    font-weight: 400;
+  }
+  .container .dinamico{
+    margin-left: 15px;
+    line-height: 90px;
+    height: 90px;
+    overflow: hidden;
+  }
+  .dinamico li{
+    color: #1864ab;
+    list-style: none;
+    font-size: 20px;
+    font-weight: 500;
+    left: 0;
+    position: relative;
+    top: 0;
+    animation: slide 10s steps(7) infinite;
+  }
+  @keyframes slide{
+    100% {
+      top: -620px
+    }
+  }
+  .dinamico li span{
+    position: relative;
+  }
+  .dinamico li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    border-left: 2px solid #fc6d6d;
+    animation: typing  1.5s steps(10) infinite; 
+    background: #111111;
+  }
+  @keyframes typing{
+    100% {
+      left: 100%;
+      margin: 0 -35px 0 35px;
+    }
+  }
+  .dinamico li span{
+    position: relative;
+  }
+ 
